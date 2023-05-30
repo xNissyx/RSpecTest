@@ -20,8 +20,23 @@
     <%= form.label :author %>
     <%= form.text_field :author %>
   </div>
+  
+  <div id="stars">
+  </div>
 
   <div class="actions">
     <%= form.submit %>
   </div>
 <% end %>
+
+<!--Ratyの記述-->
+  <script>
+    let elem = document.querySelector('#stars');
+    let opt = {
+      starOn: "<%= asset_path('star-on.png') %>",
+      starOff: "<%= asset_path('star-off.png') %>",
+      starHalf: "<%= asset_path('star-half.png') %>",
+      scoreName: 'book[score]' 
+    };
+    window.raty(elem, opt);
+  </script>

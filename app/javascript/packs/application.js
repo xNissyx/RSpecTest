@@ -8,6 +8,24 @@ import Turbolinks from "turbolinks"
 import * as ActiveStorage from "@rails/activestorage"
 import "channels"
 
+import Raty from "raty.js";
+window.raty = function(elem,opt) {
+  let raty =  new Raty(elem,opt)
+  raty.init();
+  return raty;
+}
+// ＜windowオブジェクト＞
+// 画面上に表示されているすべてのオブジェクトの親となるオブジェクト
+// JavaScriptのオブジェクト階層の最上位に位置する。
+// ウィンドウに関する情報の取得や、ウィンドウを設定・操作する。
+// => **<script>と</script>の間では省略できる。**
+
+// ＜** Object.keys() メソッド**＞
+// オブジェクトのプロパティを取得するために使うもの.
+
+// <function>
+// function(関数)とは、様々な処理を1つにまとめて、名前をつけることができるもの
+
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()

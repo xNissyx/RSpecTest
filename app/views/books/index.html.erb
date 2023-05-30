@@ -19,7 +19,28 @@
         <td><%= link_to 'Show', book %></td>
         <td><%= link_to 'Edit', edit_book_path(book) %></td>
         <td><%= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+        <td>
+        <div id="show_stars<%= book.id %>">
+          <label>Rate</label>
+        </div>
+        <script>
+          let elem<%= book.id %> = document.querySelector('#show_stars<%= book.id %>');
+          let opt<%= book.id %> = {
+            starOn: "<%= asset_path('star-on.png') %>",
+            starOff: "<%= asset_path('star-off.png') %>",
+            readOnly: true,
+            // readOnlyで見るだけ
+            score: "<%= book.score %>",
+            // scoreで星の表示ができる
+            number: 10,
+            // numberで星の数指定できる
+            scoreName: 'book[score]',
+            // マウスオーバー時のイベントハンドラを設定
+            }
+          };
+          window.raty(elem<%= book.id %>, opt<%= book.id %>);
+        </script>
+        </td>
     <% end %>
   </tbody>
 </table>
