@@ -3,6 +3,11 @@
 // a relevant structure within app/javascript and only use these pack files to reference
 // that code so it'll be compiled.
 
+import $ from 'jquery';
+global.$ = global.jQuery = $;
+// このコードはまず jquery モジュールから $ をインポートします。
+// その後、グローバルな $ と jQuery の両方を jQuery に紐づけます。
+// これにより、 $ や jQuery を使ったコードがグローバルスコープで実行可能になります。
 import Rails from "@rails/ujs"
 import Turbolinks from "turbolinks"
 import * as ActiveStorage from "@rails/activestorage"
