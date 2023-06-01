@@ -1,3 +1,6 @@
+<!--jQueryのUIプラグインのCSS-->
+<link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+
 <p id="notice"><%= notice %></p>
 
 <h1>Books</h1>
@@ -32,11 +35,8 @@
             // readOnlyで見るだけ
             score: "<%= book.score %>",
             // scoreで星の表示ができる
-            number: 10,
-            // numberで星の数指定できる
-            scoreName: 'book[score]',
+            scoreName: 'book[score]'
             // マウスオーバー時のイベントハンドラを設定
-            }
           };
           window.raty(elem<%= book.id %>, opt<%= book.id %>);
         </script>
@@ -48,3 +48,34 @@
 <br>
 
 <%= link_to 'New Book', new_book_path %>
+
+<!--アコーディオンメニュー-->
+<div id="accordion">
+  <h3>Section 1</h3>
+  <div>
+    <p>
+    Section 1の内容
+    </p>
+  </div>
+  <h3>Section 2</h3>
+  <div>
+    <p>
+    Section 2の内容
+    </p>
+  </div>
+  <h3>Section 3</h3>
+  <div>
+    <p>
+    Section 3の内容
+    </p>
+  </div>
+</div>
+
+<script>
+   $( function() {
+    $( "#accordion" ).accordion();
+  } );
+</script>
+
+<!--jqueryUIプラグインの読み込み-->
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
