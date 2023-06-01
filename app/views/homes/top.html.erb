@@ -17,6 +17,13 @@
 </div>
 <script>
 $(document).ready(function () {
+  var token = $('meta[name="csrf-token"]').attr('content');
+  $.ajaxSetup({
+    headers: {
+      'X-CSRF-Token': token
+    }
+  });
+  
   $('#open-chat-btn').click(function(){
     $('#open-chat').toggle();
   });
