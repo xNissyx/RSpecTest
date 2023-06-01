@@ -1,24 +1,10 @@
-# README
+- OS：Linux(CentOS)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+- 言語：HTML,CSS,JavaScript,Ruby,SQL
 
-Things you may want to cover:
+- フレームワーク：Ruby on Rails
 
-* Ruby version
+- JSライブラリ：jQuery
 
-* System dependencies
+- IDE：Cloud9
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
